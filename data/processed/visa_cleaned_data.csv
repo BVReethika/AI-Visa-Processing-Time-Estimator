@@ -1,0 +1,25 @@
+application_id,applicant_country,visa_type,processing_center,application_date,decision_date,visa_status,processing_time_days
+1001,India,Student,Delhi,2023-01-05,2023-02-18,Approved,44
+1002,USA,Work,New York,2023-01-10,2023-03-02,Approved,51
+1003,UK,Tourist,London,2023-01-15,2023-02-10,Rejected,26
+1004,Canada,Student,Toronto,2023-01-20,2023-03-05,Approved,44
+1005,India,Work,Mumbai,2023-01-25,2023-03-15,Approved,49
+1006,Australia,Tourist,Sydney,2023-02-01,2023-02-28,Approved,27
+1007,Germany,Student,Berlin,2023-02-05,2023-03-25,Approved,48
+1008,India,Tourist,Chennai,2023-02-10,2023-03-01,Rejected,19
+1009,USA,Student,California,2023-02-15,2023-04-05,Approved,49
+1010,UK,Work,Manchester,2023-02-20,2023-04-10,Approved,49
+1011,France,Tourist,Paris,2023-02-25,2023-03-20,Approved,23
+1012,India,Student,Hyderabad,2023-03-01,2023-04-18,Approved,48
+1013,Canada,Work,Vancouver,2023-03-05,2023-05-01,Approved,57
+1014,Australia,Student,Melbourne,2023-03-10,2023-04-22,Approved,43
+1015,Germany,Work,Frankfurt,2023-03-15,2023-05-05,Approved,51
+1016,India,Tourist,Kolkata,2023-03-20,2023-04-05,Rejected,16
+1017,USA,Work,Texas,2023-03-25,2023-05-15,Approved,51
+1018,UK,Student,Birmingham,2023-04-01,2023-05-20,Approved,49
+1019,France,Student,Lyon,2023-04-05,2023-05-30,Approved,55
+1020,India,Work,Pune,2023-04-10,2023-06-01,Approved,52
+1021,Canada,Tourist,Ottawa,2023-04-15,2023-05-10,Rejected,25
+1022,Australia,Work,Perth,2023-04-20,2023-06-05,Approved,46
+1023,Germany,Tourist,Hamburg,2023-04-25,2023-05-25,Approved,30
+1024,India,Student,Bangalore,2023-05-01,2023-06-18,Approved,48
