@@ -23,7 +23,7 @@ import seaborn as sns
 # Load cleaned dataset
 df = pd.read_csv("data/processed/visa_cleaned_data.csv")
 
-#  STEP 4 : Distribution of Processing Time
+#  Distribution of Processing Time
 plt.figure()
 sns.histplot(df["processing_time_days"], kde=True)
 plt.title("Distribution of Visa Processing Time")
@@ -32,7 +32,7 @@ plt.ylabel("Frequency")
 plt.show()
 
 
-# STEP 5 : Processing Time by Visa Type
+# Processing Time by Visa Type
 plt.figure()
 sns.boxplot(x="visa_type", y="processing_time_days", data=df)
 plt.title("Processing Time by Visa Type")
@@ -41,7 +41,7 @@ plt.ylabel("Processing Time (Days)")
 plt.xticks(rotation=30)
 plt.show()
 
-# STEP 6: Processing Time by Applicant Country
+#  Processing Time by Applicant Country
 plt.figure()
 sns.boxplot(x="applicant_country", y="processing_time_days", data=df)
 plt.title("Processing Time by Applicant Country")
@@ -50,7 +50,7 @@ plt.ylabel("Processing Time (Days)")
 plt.xticks(rotation=45)
 plt.show()
 
-# STEP 7: Seasonal Trend Analysis
+# Seasonal Trend Analysis
 df["application_date"] = pd.to_datetime(df["application_date"])
 df["month"] = df["application_date"].dt.month
 
@@ -61,7 +61,7 @@ plt.xlabel("Application Month")
 plt.ylabel("Processing Time (Days)")
 plt.show()
 
-# STEP 8: Processing Time by Processing Center
+# Processing Time by Processing Center
 plt.figure()
 sns.boxplot(x="processing_center", y="processing_time_days", data=df)
 plt.title("Processing Time by Processing Center")
@@ -70,7 +70,7 @@ plt.ylabel("Processing Time (Days)")
 plt.xticks(rotation=30)
 plt.show()
 
-# STEP 9: Feature Importance Analysis
+# Feature Importance Analysis
 from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestRegressor
 
