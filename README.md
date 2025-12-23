@@ -48,6 +48,6 @@ To analyze the cleaned visa dataset and identify trends, patterns, and key facto
 - Git & GitHub
 
 ### Output
-Multiple visualization plots generated using src/eda.py
-Feature importance values printed to console
-Insights used to guide machine learning model selection
+- Multiple visualization plots generated using src/eda.py
+- Feature importance values printed to console
+- Insights used to guide machine learning model selection
