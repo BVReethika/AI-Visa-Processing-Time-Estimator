@@ -51,3 +51,49 @@ To analyze the cleaned visa dataset and identify trends, patterns, and key facto
 - Multiple visualization plots generated using src/eda.py
 - Feature importance values printed to console
 - Insights used to guide machine learning model selection
+
+## Milestone 3: Predictive Modeling (Weeks 5–6)
+
+### Objective
+To develop and evaluate a machine learning model that predicts visa processing time based on historical application data.
+
+### Model Selected
+**Random Forest Regressor**
+
+Random Forest was chosen over Linear Regression because:
+- Visa processing time depends on non-linear factors such as country, visa type, and processing center
+- It handles categorical features effectively after encoding
+- It provides better accuracy and robustness for small to medium datasets
+
+### Dataset Used
+Processed dataset generated from Milestone 1 & 2:
+
+### Features Used
+- Applicant Country (encoded)
+- Visa Type (encoded)
+- Processing Center (encoded)
+- Visa Status (encoded)
+- Application Month
+
+### Target Variable
+- `processing_time_days`
+
+### Model Training Process
+- Categorical features were encoded using Label Encoding
+- Data was split into training (80%) and testing (20%)
+- Random Forest Regressor was trained with optimized parameters
+- Model performance was evaluated using standard regression metrics
+
+### Evaluation Metrics
+- **MAE (Mean Absolute Error)** – Measures average prediction error in days
+- **RMSE (Root Mean Squared Error)** – Penalizes larger errors
+- **R² Score** – Indicates how well the model explains variance in processing time
+
+### Results
+The Random Forest model achieved:
+- Low MAE and RMSE values
+- High R² score indicating good predictive performance
+
+### Output
+- Trained model saved as:
+
