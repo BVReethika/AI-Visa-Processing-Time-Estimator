@@ -1,3 +1,7 @@
+streamlit
+numpy
+scikit-learn
+joblib
 contourpy==1.1.1
 cycler==0.12.1
 fonttools==4.57.0

@@ -52,7 +52,7 @@ To analyze the cleaned visa dataset and identify trends, patterns, and key facto
 - Feature importance values printed to console
 - Insights used to guide machine learning model selection
 
-## Milestone 3: Predictive Modeling (Weeks 5–6)
+## Milestone 3: Predictive Modeling
 
 ### Objective
 To develop and evaluate a machine learning model that predicts visa processing time based on historical application data.

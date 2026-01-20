@@ -1,0 +1,77 @@
+import streamlit as st
+import pandas as pd
+import joblib
+from sklearn.preprocessing import LabelEncoder
+import numpy as np
+
+# Load trained model
+model = joblib.load("models/random_forest_model.pkl")
+
+st.title("AI Visa Processing Time Estimator")
+st.write("Estimate visa processing time using AI-based prediction")
+
+# ---------------------------
+# Input Fields
+# ---------------------------
+applicant_country = st.selectbox(
+    "Applicant Country",
+    ["India", "USA", "UK", "Canada", "Australia", "Germany", "France"]
+)
+
+visa_type = st.selectbox(
+    "Visa Type",
+    ["Student", "Work", "Tourist"]
+)
+
+processing_center = st.selectbox(
+    "Processing Center",
+    ["Delhi", "Mumbai", "Chennai", "Hyderabad", "Bangalore",
+    "New York", "London", "Toronto", "Berlin", "Paris"]
+)
+
+visa_status = st.selectbox(
+    "Visa Status",
+    ["Approved", "Rejected"]
+)
+
+application_month = st.selectbox(
+    "Application Month",
+    list(range(1, 13))
+)
+
+# ---------------------------
+# Encode Inputs
+# ---------------------------
+def encode_input(value, classes):
+    encoder = LabelEncoder()
+    encoder.fit(classes)
+    return encoder.transform([value])[0]
+
+country_enc = encode_input(applicant_country,["India", "USA", "UK", "Canada", "Australia", "Germany", "France"])
+
+visa_type_enc = encode_input(visa_type,["Student", "Work", "Tourist"])
+
+center_enc = encode_input(processing_center,["Delhi", "Mumbai", "Chennai", "Hyderabad", "Bangalore","New York", "London", "Toronto", "Berlin", "Paris"])
+
+status_enc = encode_input(visa_status,["Approved", "Rejected"])
+
+# ---------------------------
+# Prediction
+# ---------------------------
+if st.button("Estimate Processing Time"):
+    input_data = pd.DataFrame([{
+        "applicant_country": country_enc,
+        "visa_type": visa_type_enc,
+        "processing_center": center_enc,
+        "visa_status": status_enc,
+        "application_month": application_month
+    }])
+
+    prediction = model.predict(input_data)[0]
+
+    # Prediction range (confidence interval)
+    lower = int(prediction - 5)
+    upper = int(prediction + 5)
+
+    st.success(f"Estimated Processing Time: **{lower} – {upper} days**")
+    st.info("Prediction is based on historical visa processing data.")
