@@ -3,6 +3,7 @@ import pandas as pd
 import joblib
 from sklearn.preprocessing import LabelEncoder
 import numpy as np
+import os
 
 # Load trained model
 model = joblib.load("models/random_forest_model.pkl")
