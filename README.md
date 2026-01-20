@@ -97,3 +97,24 @@ The Random Forest model achieved:
 ### Output
 - Trained model saved as:
 
+
+## Milestone 4: Web App Development & Deployment
+
+### Objective
+To build and deploy a user-friendly web application that estimates visa processing time using a trained ML model.
+
+### Implementation
+- Developed an interactive web application using Streamlit
+- Integrated the trained Random Forest prediction model
+- Designed input forms for visa details
+- Displayed estimated processing time range with confidence interval
+
+### Deployment
+- Application deployed using Streamlit Cloud
+- Supports real-time prediction based on user input
+
+### Outcome
+- Improved transparency for visa applicants
+- Easy-to-use AI-powered estimator
+
+
