@@ -104,3 +104,26 @@ if st.button("Estimate Processing Time"):
 
     st.success(f"Estimated Processing Time: **{lower} – {upper} days**")
     st.info("Prediction is based on historical visa processing data.")
+     # Save to temporary JSON
+    record = {
+        "applicant_name": "Anonymous",
+        "applicant_country": applicant_country,
+        "visa_type": visa_type,
+        "processing_center": processing_center,
+        "visa_status": visa_status,
+        "application_month": application_month,
+        "predicted_processing_days": prediction,
+        "predicted_range": [lower, upper],
+        
+    }
+
+  
+def add_application_temp(record):
+    """
+    Temporarily store application data
+    """
+    if "temp_applications" not in st.session_state:
+        st.session_state.temp_applications = []
+
+    st.session_state.temp_applications.append(record)
+

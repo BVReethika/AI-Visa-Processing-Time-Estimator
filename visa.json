@@ -1,0 +1,29 @@
+{
+    "applications": [
+        {
+            "application_id": 1,
+            "applicant_name": "Alice Smith",
+            "applicant_country": "USA",
+            "visa_type": "Tourist",
+            "processing_center": "New York",
+            "visa_status": "Approved",
+            "application_month": 1,
+            "predicted_processing_days": 5.3,
+            "predicted_range": [0, 10],
+            "date": "2026-01-21"
+        },
+        {
+            "application_id": 2,
+            "applicant_name": "John Doe",
+            "applicant_country": "India",
+            "visa_type": "Student",
+            "processing_center": "Delhi",
+            "visa_status": "Approved",
+            "application_month": 2,
+            "predicted_processing_days": 10.7,
+            "predicted_range": [5, 15],
+            "date": "2026-01-21"
+        }
+    ]
+}
+
