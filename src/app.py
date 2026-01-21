@@ -6,7 +6,7 @@ import numpy as np
 import os
 
 # Load trained model
-#model = joblib.load("models/random_forest_model.pkl")
+model = joblib.load("models/random_forest_model.pkl")
 # MODEL_PATH = os.path.join("models", "random_forest_model.pkl")
 
 # if not os.path.exists(MODEL_PATH):
@@ -15,24 +15,24 @@ import os
 
 # model = joblib.load(MODEL_PATH)
 
-import os
-import streamlit as st
-import joblib
+# import os
+# import streamlit as st
+# import joblib
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(BASE_DIR, "..", "models", "random_forest_model.pkl")
+# BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# MODEL_PATH = os.path.join(BASE_DIR, "..", "models", "random_forest_model.pkl")
 
-MODEL_PATH = os.path.abspath(MODEL_PATH)
+# MODEL_PATH = os.path.abspath(MODEL_PATH)
 
-if not os.path.exists(MODEL_PATH):
-    st.error(f"Model not found at: {MODEL_PATH}")
-    st.stop()
+# if not os.path.exists(MODEL_PATH):
+#     st.error(f"Model not found at: {MODEL_PATH}")
+#     st.stop()
 
-@st.cache_resource
-def load_model(path):
-    return joblib.load(path)
+# @st.cache_resource
+# def load_model(path):
+#     return joblib.load(path)
 
-model = load_model(MODEL_PATH)
+# model = load_model(MODEL_PATH)
 
 
 
