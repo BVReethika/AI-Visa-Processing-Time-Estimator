@@ -31,7 +31,7 @@ joblib>=1.4
 streamlit>=1.31
 pandas>=2.2
 numpy>=2.0
-scikit-learn==1.2.2
+scikit-learn>=1.4
 joblib>=1.4
 
 
