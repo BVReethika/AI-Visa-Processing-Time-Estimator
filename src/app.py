@@ -6,7 +6,15 @@ import numpy as np
 import os
 
 # Load trained model
-model = joblib.load("models/random_forest_model.pkl")
+#model = joblib.load("models/random_forest_model.pkl")
+MODEL_PATH = os.path.join("models", "random_forest_model.pkl")
+
+if not os.path.exists(MODEL_PATH):
+    st.error("Model file not found. Please check deployment.")
+    st.stop()
+
+model = joblib.load(MODEL_PATH)
+
 
 st.title("AI Visa Processing Time Estimator")
 st.write("Estimate visa processing time using AI-based prediction")
